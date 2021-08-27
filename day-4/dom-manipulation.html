@@ -3,34 +3,39 @@ On clicking of the color name change the background color of the div.container t
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Event Delegation</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+      .container {
+        border: 1px solid;
+        height: 10rem;
+        width: 10rem;
+      }
+    </style>
+  </head>
 
-    .container {
-      border: 1px solid;
-      height: 10rem;
-      width: 10rem;
-    }
-  </style>
-</head>
+  <body>
+    <div class="container">
+      <div class="red">red</div>
+      <div class="blue">blue</div>
+      <div class="green">green</div>
+    </div>
+    <script>
+      let colorDivs = document.querySelectorAll("div>div");
+      let container = document.querySelector(".container");
 
-<body>
-  <div class="container">
-    <div class="red">red</div>
-    <div class="blue">blue</div>
-    <div class="green">green</div>
-  </div>
-  <script>
-    
-  </script>
-</body>
-
+      for (let i = 0; i < colorDivs.length; i++) {
+        colorDivs[i].addEventListener("click", function (e) {
+          container.style.background = e.currentTarget.classList[0];
+        });
+      }
+    </script>
+  </body>
 </html>

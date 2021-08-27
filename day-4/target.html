@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .super-parent {
+        height: 10rem;
+        width: 10rem;
+        background-color: yellow;
+      }
+
+      .sub-parent {
+        height: 5rem;
+        width: 5rem;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="super-parent">
+      <button>click</button>
+    </div>
+    <script>
+      let superParent = document.querySelector(".super-parent");
+
+      superParent.addEventListener("click", function (e) {
+        console.log(e.target);
+        console.log(e.currentTarget);
+        console.log("super");
+      });
+    </script>
+  </body>
+</html>

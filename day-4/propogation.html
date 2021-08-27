@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .super-parent {
+        height: 10rem;
+        width: 10rem;
+        background-color: yellow;
+      }
+
+      .sub-parent {
+        height: 5rem;
+        width: 5rem;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="super-parent">
+      <div class="sub-parent">
+        <button>click</button>
+      </div>
+    </div>
+    <script>
+      let btn = document.querySelector("button");
+
+      btn.addEventListener("click", function (event) {
+        // event.stopPropagation();
+        console.log("btn event handler");
+      });
+
+      let subParent = document.querySelector(".sub-parent");
+      let superParent = document.querySelector(".super-parent");
+
+      subParent.addEventListener("click", function (e) {
+          e.stopPropagation()
+        console.log("sub");
+      });
+
+      superParent.addEventListener("click", function () {
+        console.log("super");
+      });
+    </script>
+  </body>
+</html>
