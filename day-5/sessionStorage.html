@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 20rem;
+        width: 30rem;
+        margin: auto;
+        margin-top: 8rem;
+        border: 1px solid;
+      }
+
+      input {
+        display: block;
+        margin: auto;
+        height: 3rem;
+        width: 80%;
+        margin-top: 1.5rem;
+      }
+
+      button {
+        display: block;
+        height: 2.5rem;
+        width: 50%;
+        margin: auto;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HOME</h1>
+    <div>
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+    </div>
+
+    <script>
+      let div = document.querySelector("div");
+      let h1 = document.querySelector("h1");
+
+      if (sessionStorage.getItem("logged")) {
+        h1.style.display = "block";
+        div.style.display = "none";
+      } else {
+        h1.style.display = "none";
+        div.style.display = "block";
+      }
+
+      let username = document.querySelector("[type='text']");
+      let password = document.querySelector("[type='password']");
+
+      let btn = document.querySelector("button");
+
+      btn.addEventListener("click", function () {
+        let user = username.value;
+        let pass = password.value;
+        if (user && password) {
+          alert("login successful");
+          sessionStorage.setItem("logged", true);
+          h1.style.display = "block";
+          div.style.display = "none";
+        } else {
+          alert("please try again");
+        }
+      });
+    </script>
+  </body>
+</html>
