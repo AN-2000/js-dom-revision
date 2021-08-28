@@ -1,0 +1,15 @@
+http verbs- https://www.restapitutorial.com/lessons/httpmethods.html
+Fetch- https://www.javascripttutorial.net/javascript-fetch-api/
+Cors- https://medium.com/@baphemot/understanding-cors-18ad6b478e2b
+Canvas- https://flaviocopes.com/canvas/
+csrf-> https://medium.com/@charithra/introduction-to-csrf-a329badfca49
+Geolocation- https://www.w3schools.com/html/html5_geolocation.asp
+Location- https://developer.mozilla.org/en-US/docs/Web/API/Location
+Notification- https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API
+Media Stream - https://www.tutorialspoint.com/webrtc/webrtc_media_stream_apis.htm
+Media Recorder- https://medium.com/mindorks/developing-an-audio-recorder-app-2fc972df62f0
+Progressive rendering- https://medium.com/the-thinkmill/progressive-rendering-the-key-to-faster-web-ebfbbece41a4
+Srcset- https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+Background- https://cssreference.io/property/background/
+Z-index- https://cssreference.io/property/z-index/
+****************************************************************************
